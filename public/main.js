@@ -28,7 +28,7 @@ getPage.onclick = () => {
 
 getJSON.onclick = () => {
   const request = new XMLHttpRequest();
-  request.open("get", "/5.json");
+  request.open("get", "./5.json");
   request.onreadystatechange = () => {
     if (
       request.readyState === 4 &&
@@ -46,7 +46,7 @@ getJSON.onclick = () => {
 
 getXML.onclick = () => {
   const request = new XMLHttpRequest();
-  request.open("GET", "/4.xml");
+  request.open("GET", "./4.xml");
   request.onreadystatechange = () => {
     if (
       request.readyState === 4 &&
@@ -63,7 +63,7 @@ getXML.onclick = () => {
 
 getHTML.onclick = () => {
   const request = new XMLHttpRequest();
-  request.open("get", "/3.html");
+  request.open("get", "./3.html");
   request.onload = () => {
     const div = document.createElement("div");
     div.innerHTML = request.response;
@@ -77,7 +77,7 @@ getHTML.onclick = () => {
 
 getJS.onclick = () => {
   const request = new XMLHttpRequest();
-  request.open("GET", "/2.js");
+  request.open("GET", "./2.js");
   request.onload = () => {
     // 创建 script 标签
     const script = document.createElement("script");
@@ -94,7 +94,7 @@ getJS.onclick = () => {
 
 getCSS.onclick = () => {
   const request = new XMLHttpRequest();
-  request.open("GET", "/style.css");
+  request.open("GET", "./style.css");
   request.onreadystatechange = () => {
     //下载完成，但不知道是下载成功还是下载失败
     if (request.readyState === 4) {
