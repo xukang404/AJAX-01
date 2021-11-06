@@ -1,30 +1,30 @@
-let n = 1;
-getPage.onclick = () => {
-  const request = new XMLHttpRequest();
-  if (n !== 3) {
-    request.open("GET", `/page${n + 1}`);
-    request.onreadystatechange = () => {
-      if (
-        request.readyState === 4 &&
-        request.status >= 200 &&
-        request.status < 300
-      ) {
-        const array = JSON.parse(request.response);
-        array.forEach((element) => {
-          const li = document.createElement("li");
-          li.textContent = element.id;
-          xxx.appendChild(li);
-        });
-        n += 1;
-      }
-    };
-    request.send();
-  } else {
-    const li = document.createElement("li");
-    li.textContent = "没有更多内容了";
-    xxx.appendChild(li);
-  }
-};
+// let n = 1;
+// getPage.onclick = () => {
+//   const request = new XMLHttpRequest();
+//   if (n !== 3) {
+//     request.open("GET", `/page${n + 1}`);
+//     request.onreadystatechange = () => {
+//       if (
+//         request.readyState === 4 &&
+//         request.status >= 200 &&
+//         request.status < 300
+//       ) {
+//         const array = JSON.parse(request.response);
+//         array.forEach((element) => {
+//           const li = document.createElement("li");
+//           li.textContent = element.id;
+//           xxx.appendChild(li);
+//         });
+//         n += 1;
+//       }
+//     };
+//     request.send();
+//   } else {
+//     const li = document.createElement("li");
+//     li.textContent = "没有更多内容了";
+//     xxx.appendChild(li);
+//   }
+// };
 
 getJSON.onclick = () => {
   const request = new XMLHttpRequest();
